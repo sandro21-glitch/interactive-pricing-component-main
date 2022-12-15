@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.main {
+  height: 100vh;
+}
+.main .header-title {
+  background: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 3.5rem;
+  position: relative;
+  z-index: 0;
+}
+.main .header-title .circles-abs {
+  position: absolute;
+  z-index: 0;
+}
+.main .header-title .head-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: hsl(227deg, 35%, 25%);
+  z-index: 0;
+}
+.main .header-title .head-para {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: hsl(225deg, 20%, 60%);
+  z-index: 0;
+}
+.main .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main .main-container .card {
+  z-index: 1;
+  transform: translateY(-20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  border-radius: 0.8rem;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 2rem 0 2rem 0;
+}
+.main .main-container .card .card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+}
+.main .main-container .card .card-header .views-count {
+  font-size: 1.3rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.main .main-container .card .card-header .price-count {
+  font-size: 2.7rem;
+  color: hsl(227deg, 35%, 25%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .main-container .card .card-header .price-count .duration {
+  font-size: 1rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.main .main-container .card .slider-section {
+  padding: 0 2rem 0 2rem;
+  width: 100%;
+}
+.main .main-container .card .slider-section input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* padding: 10px; */
+  /* background-color: hsl(224, 65%, 95%); */
+  background: linear-gradient(90deg, hsl(174deg, 86%, 45%) 1%, hsl(224deg, 65%, 95%) 10%);
+  position: relative;
+  margin: 50px 0px;
+  /* width: 100%; */
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.main .main-container .card .slider-section input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* appearance: ur; */
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 50%;
+  position: relative;
+  background-color: hsl(174deg, 86%, 45%);
+  position: relative;
+  box-shadow: 1px 10px 15px 1px hsl(174deg, 86%, 60%);
+}
+.main .main-container .card .billing {
+  padding: 0 2rem 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 0.5rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.main .main-container .card .billing .discount {
+  font-size: 0.8rem;
+  color: hsl(15deg, 100%, 70%);
+  background-color: #feece7;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 1rem;
+}
+.main .main-container .card .billing .billing-checkbox:checked {
+  background-color: #a5f3eb;
+}
+.main .main-container .card .billing .billing-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 2rem;
+  background-color: #cdd7ee;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  transition: background-image 0.09s ease-in-out;
+  position: relative;
+  margin: 0 0.6rem;
+  transition: all 0.3s;
+}
+.main .main-container .card .billing .billing-checkbox:checked::after {
+  left: 1.5rem;
+}
+.main .main-container .card .billing .billing-checkbox:after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 2rem;
+  background-color: white;
+  position: absolute;
+  transform: scale(0.7);
+  left: 0;
+  transition: left 0.09s ease-in-out;
+  box-shadow: 0 0.1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.main .main-container .card .card-footer {
+  border-top: 1px solid #eaeefb;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem 0 2rem;
+}
+.main .main-container .card .card-footer .list {
+  list-style-type: none;
+}
+.main .main-container .card .card-footer .list li {
+  display: flex;
+  align-items: center;
+  margin-top: 0.8rem;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.main .main-container .card .card-footer .list li img {
+  width: 1.5rem;
+}
+.main .main-container .card .card-footer .btn {
+  padding: 0.4rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  background-color: hsl(227deg, 35%, 25%);
+  color: #bdccff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.main .main-container .card .card-footer .btn:hover {
+  opacity: 0.8;
+}
+.main .main-container .card .card-footer .btn:active {
+  transform: scale(0.97);
+}
+.main .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+  .card {
+    margin: 0 2rem 0 2rem;
+  }
+  .card .card-footer {
+    flex-direction: column;
+  }
+  .card .card-footer .btn {
+    margin-top: 2rem;
+  }
+  .card .card-header {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */
